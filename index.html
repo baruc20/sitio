@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RFP-LOGISTICA</title>
+  <meta charset="utf-8">
+  	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+  <style>
+  
+/*  estilo imagecarrusel datos CVEGA*/
+#centrador{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: red;
+}
+
+#imagen{
+    position: absolute;
+    width: 70%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/*  fin estilo carrusel datos CVEGA*/
+  body {
+    position: relative; 
+  }
+  .affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+   position: relative;
+   top: -5px;
+  }
+  #section1 {color: #fff; background-color: #fff;}
+  #section123 {padding-top:50px;color: #fff; background-color: #fff;}
+  #section2 {padding-top:50px;color: #fff; background-color: #673ab7;}
+  #section3 {color: #fff; background-color: #ff9800;}
+  #section41 {padding-top:50px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;color: #fff; background-color: #009688;}
+  #section43 {padding-top:50px;color: #fff; background-color: #4d4d4d;}
+ /* #section44 {padding-top:50px;height:500px;color: #fff; background-color: #009688;} */
+  .navbar-default {
+  background-color: #fdf9ff;
+  border-color: #072ce8;
+}
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #f4f1f6;
+}
+.navbar-default .navbar-brand {
+  color: #000000;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #4169e1;
+}
+.navbar-default .navbar-text {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #000000;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #4169e1;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #4169e1;
+  background-color: #f4f1f6;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #4169e1;
+  background-color: #f4f1f6;
+}
+.navbar-default .navbar-toggle {
+  border-color: #f4f1f6;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #f4f1f6;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #000000;
+}
+.navbar-default .navbar-link {
+  color: #000000;
+}
+.navbar-default .navbar-link:hover {
+  color: #4169e1;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #000000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #4169e1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #4169e1;
+    background-color: #f4f1f6;
+  }
+.carousel .img-responsive {
+  width:100%;
+}
+
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+ 
+.texto-encima{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+	
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+<nav class="navbar-default" data-spy="affix" data-offset-top="197">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#section3">Section 3</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section41">Section 4-1</a></li>
+              <li><a href="#section42">Section 4-2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+
+
+<!-- menu fin -->
+
+<div id="mycarousel" class="carousel slide" data-ride="carousel">
+  
+   
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+        <video id="mivideo" data-color="lightblue" autoplay="autoplay" loop muted>
+        <source src="video/Rfplogistica.mp4" type="video/mp4"></source>
+      </video>
+        <div class="carousel-caption">
+            <h3>First Image</h3>
+			
+        </div>
+    </div>
+    <div class="item" >
+        <img src="img/Saguaro_forest_2.jpg" data-color="firebrick" alt="Second Image" >
+        <div class="carousel-caption">
+            <h3>Second Image</h3>
+			<p>Esto es un parrafo</p>
+        </div>
+    </div>
+    <div class="item">
+        <img src="img/free.jpg" data-color="violet" alt="Third Image">
+        <div class="carousel-caption">
+            <h3>Third Image</h3>
+			<p>Esto es un parrafo</p>
+        </div>
+    </div>
+    
+    
+  </div>
+ 
+  <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+ 
+
+
+  
+   
+  
+
+ 
+ 
+ 
+ 
+
+
+<!-- menu -->
+
+<div id="section1" class="container-fluid">
+  
+  <article >
+   
+	  <div class="col-md-2" style="padding: 1px;" id="dos" >
+		<img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: #1a1aff; ">
+		<div class="text">MISIÓN</div>
+            
+            
+            </div><!-- col1-->
+			
+		<div class="col-md-2 col-center"  style="padding: 1px;" style="vertical-align:middle; " >
+            
+            <img src="img/modificada2.png" class="img-responsive" width="100%" height="100%" style=" background-color: #1aa3ff; ">
+			
+            </div><!-- col2-->
+			
+			<div class="col-md-2" style="padding: 1px;" >
+            
+             <img src="img/vacio.png" class="img-responsive" width="100%" height="100%"  style=" background-color: #00bfff; ">
+
+			<div class="text">CALIDAD</div>
+            
+            </div><!-- col3-->
+		
+		<div class="col-md-2" style="padding: 1px;" >
+            
+            <img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: #FFA500; ">
+          <!--  <div class="img-container">            <p>FOTO</p>            </div> -->
+            <div class="text">INNOVACIÓN </div>
+			
+			
+            </div><!-- col4-->
+			
+			
+			<div class="col-md-2" style="padding: 1px;" >
+            
+            <img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: red; ">
+            <div class="text">PASIÓN </div>
+            
+            </div><!-- col5-->
+			
+			
+			
+			<div class="col-md-2" style="padding: 1px;" >
+            
+
+            
+            <img src="img/modificada2.png" class="img-responsive" width="100%" height="100%" style=" background-color: #1aa3ff; ">
+			<div class="img-container">
+			
+            </div> <!-- div container-->
+            </div><!-- col6-->
+
+  
+  </article>
+
+  <article >
+   
+	  <div class="col-md-2" style="padding: 1px;" >
+            
+            <img src="img/modificada2.png" class="img-responsive" width="100%" height="100%" style=" background-color: red; ">
+            
+            
+            </div><!-- col-->
+			
+		<div class="col-md-2" style="padding: 1px;" >
+            
+            <img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: red; ">
+            <div class="text">VISIÓN </div>
+            
+            </div><!-- col-->
+			
+			<div class="col-md-2 " style="padding: 1px;" >
+            
+             <img src="img/modificada2.png" class="img-responsive" width="100%" height="100%" style=" background-color: red; ">
+            
+            
+            </div><!-- col-->
+		
+		<div class="col-md-2" style="padding: 1px;" >
+            
+            <img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: #673ab7; ">
+             <div class="text">INTEGRIDAD </div>
+			
+            
+            </div><!-- col-->
+			
+			<div class="col-md-2" style="padding: 1px;" >
+            
+            <img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: #ff6600; ">
+            <div class="text">RESPETO </div>
+			
+            </div><!-- col-->
+			
+			
+			
+			<div class="col-md-2" style="padding: 1px;" >
+            
+            <img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: #32cd32; ">
+            <div class="text">CRECIMIENTO </div>
+            
+            </div><!-- col-->
+  
+			</br>
+  </article>
+</div> 
+  
+  
+
+ <center> <h1>NUESTROS DATOS NUMEROS</h1> </center>
+
+<div id="mycarousel2" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox" style="display: block; margin-left: auto">
+      <div class="item active" >
+        <img id="imagen" src="img/Establecidos.png" alt="Second Image">
+        <div class="carousel-caption">
+
+ 
+        </div>
+      </div>
+      <div class="item" >
+        <img id="imagen" src="img/mapa marcado.png" alt="Third Image">
+        <div class="carousel-caption">
+
+
+        </div>
+      </div>
+      <div class="item">
+        <img id="imagen" src="img/trabajadores.png" alt="Third Image">
+        <div class="carousel-caption">
+
+
+        </div>
+      </div>
+      <div class="item">
+        <img id="imagen" src="img/estadistica.png" alt="Third Image">
+        <div class="carousel-caption">
+
+
+        </div>
+      </div>
+      
+  </div>
+
+  <a class="left carousel-control" href="#mycarousel2" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" ></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#mycarousel2" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" ></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>    
+
+
+<div id="section3" class="container-fluid">
+<center>
+  <h1>UNIDADES DE NEGOCIO</h1>
+ </center>
+ <!-- hover 1-->
+		
+		<div class="col-md-4 " style="padding: 20px;" id="dos" >
+		
+		<img src="img/Slider21.jpg" class="img-rounded" alt="Call center" width="100%" height="350px"> </br>
+		<center>
+			<h3> Servicio de Inventario </h3></br>
+			<h4>Administracion de Bodegas Operacionales</h4>
+			<h4>Administración de Bodegas de Proyecto</h4>
+			<h4>Apoyo Mantención de Plantas</h4>
+			<h4>Apoyo Logistico en Plantas</h4>
+			<h4>Administración de Pañoles</h4>
+			<h4>Servicio de Inventario</h4></br>
+
+		
+		
+		
+		
+		</center>
+		
+		</div>
+		
+		<!-- hover 2-->
+		
+		<div class="col-md-4 " style="padding: 20px;" id="dos" >
+		
+		<img src="img/Activación-Órdenes-de-Compras-278x173.png" class="img-rounded" alt="Call center" width="100%" height="350px"> </br>
+		<center>
+			<h3>  Back Office</h3></br>
+			<h4>Activación de Ordenes de Compra</h4>
+			<h4>Administración y Coordinación Logistica</h4>
+			<h4>Gestión de Permisos Viales</h4>
+			<h4>Gestión y Administración de Bodega de Transito</h4>
+			<h4>Gestión de Procesos</h4>
+			<h4>Comercio exterior</h4></br>
+
+		
+		</center>
+		</div>
+		
+		<!-- hover 3-->
+
+		<div class="col-md-4 " style="padding: 20px;"  >
+		
+	
+		<img src="img/IMG_3092-278x173.jpg" class="img-rounded" alt="Call center" width="100%" height="350px"> </br>
+		<center>
+			<h3>Inspeción Auditorias </h3></br>
+			<h4>Inspección de Casinos</h4>
+			<h4>Fiscalización de Equipos de Transporte Personal</h4>
+			<h4>Monitoreo de Carga y Estiva</h4>
+			<h4>Seguimiento y Escolta</h4>
+			<h4>Estudios de Ruta</h4></br>
+		</center>
+		</div>
+			
+		
+ 
+ <!-- hover 4-->
+<!--		
+		<div class="col-md-4 " style="padding: 1px;" id="dos" >
+		<div class="img-container">
+		<img src="img/Slider21.jpg" class="img-rounded" alt="Call center" width="100%" height="350px"> </br>
+		<p> Administración de bodegas </p>
+		
+		</div>
+		</div>
+ -->
+ 
+</div>
+
+ <center> <h1>CLIENTES</h1> </center>
+<div id="mycarousel2" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox" style="display: block; margin-left: auto">
+      <div class="item active" >
+        <img id="imagen" src="clientes/Clientes1final.svg" alt="Second Image">
+        <div class="carousel-caption">
+
+ 
+        </div>
+      </div>
+      <div class="item" >
+        <img id="imagen" src="clientes/clientes2.svg" alt="Third Image">
+        <div class="carousel-caption">
+
+
+        </div>
+      </div>
+      <div class="item">
+        <img id="imagen" src="clientes/cliente3.svg" alt="Third Image">
+        <div class="carousel-caption">
+
+
+        </div>
+      </div>
+    
+      
+  </div>
+
+  <a class="left carousel-control" href="#mycarousel2" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" ></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#mycarousel2" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" ></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>   
+
+
+
+<div id="section41" class="container-fluid">
+<!-- contacto-->
+<div class="col-xs-12"   > <center> <h3>CONTACTO</h3> </center> </div>
+
+	<!--	<p align="left" style="font-family: arial, sans-serif;
+font-size: 12px;
+">Para todo tipo de preguntas, comentarios e inquietudes; por favor llámanos: 2 2477 9000 o completa el formulario a continuación
+		</p>
+		</br> </div>-->
+		</br>
+
+		<!--Google map-->
+		
+		<div class="col-xs-6"  >
+		
+		<!-- formulario-->
+		<!--action=" /action_page.php" -->
+		<form action="mailto:baguilar@rfp-logistica.com">
+		 <div class="form-group text-left ">
+			<label for="name">Nombre:</label>
+			<input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" name="nombre">
+			</div>
+			<!-- email-->
+			<div class="form-group text-left ">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="correo" placeholder="Ingrese su correo" name="correo">
+			</div>
+			<!-- asunto-->
+			<div class="form-group text-left ">
+			<label for="name">Asunto:</label>
+			<input type="text" class="form-control" id="asunto" placeholder="Ingrese el asunto" name="asunto">
+			</div>
+			
+			<!--comentario-->
+			<div class="form-group text-left">
+			<label for="comment" >Comentario:</label>
+			<textarea class="form-control" rows="5" id="comment" placeholder="Ingrese un texto" ></textarea>
+			</div>
+			<div class="form-group"align="right" >
+			<button type="submit" name="Submit" class="btn btn-primary">ENVIAR</button>
+			</div>
+			
+		
+		</form>
+		
+		</div>
+		
+		
+			<div class="col-xs-6"   >
+		
+		  
+		 
+
+	
+
+	
+	<iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.30395800415!2d-70.69551168534827!3d-33.337007980806526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c7427ec128f9%3A0x9649a20ec863db6b!2sRFP+Logistica+S.A.!5e0!3m2!1ses!2scl!4v1549027315098" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+		</iframe></br>
+		
+		 </div>
+          
+
+<!--Google Maps-->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		</div>
+	
+	
+
+
+
+
+
+
+		<!--	mi texto <i class="fa fa-building-o" aria-hidden="true"> ee</i>
+			
+			<i class="fas fa-igloo"></i>
+			<span class="fab fa-twitter-square fa-10x"   ></span>
+			-->
+</div>
+
+<div id="section43" class="container-fluid">
+  
+	<div class="row show-grid" >
+	<div class="col-md-4" style="padding: 10px;" >
+	<center>	<strong>	<p>REDES SOCIALES</p>	</strong>	</center></br>
+<center>	<a href="#"><span class="fab fa-facebook-square fa-3x"  ></span> </a>
+	   <a href="#"><span class="fab fa-twitter-square fa-3x"   ></span> </a>
+	   <a href="#"><span class="fab fa-linkedin fa-3x"   ></span> </a>
+	   <a href="https://www.google.com/maps/place/RFP+Logistica+S.A./@-33.337008,-70.6955117,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c7427ec128f9:0x9649a20ec863db6b!8m2!3d-33.337008!4d-70.693323"  target="_blank" ><span class="fas fa-map-marker-alt fa-3x" ></span> </a>
+	</center>
+	</div>
+	
+	<div class="col-md-4" style="padding: 10px;" >
+	<center> <strong>	<p>OFICINA PRINCIPAL </p> </strong> </br>
+		
+	<p>	Carretera General San Martin, 9290, Bodega J, Quilicura, Santiago. </br>
+	<span <i class="far fa-envelope fa-1x"></i>   </span> &nbsp contacto@rfp-logistica.cl </br>
+	<span <i class="fas fa-phone fa-1x"></i>   </span> &nbsp Teléfono: 2 2477 9000 </br>
+		
+			</strong>
+		 
+		
+		</p>
+	
+	</center>
+	</div>
+
+	<div class="col-md-4" style="padding: 10px;" >
+	<center>	<strong>	<p>CERTIFICACIONES </p>	</strong>	</center></br>
+	<center> <img src="img/certificacion.jpg.jpg" class="img-rounded" alt="Cinque Terre" width="50%" height="125px" > </center>
+
+	</div>
+	
+	</div>
+  
+  
+		
+<div class="col-xs-12">
+<center> <p class="text-muted credit" style="color:#fff;"> © 2019 RFP Logistica S.A. Todo los derechos reservados.</p></center></div>
+</div>
+</div>
+</body>
+</html>
