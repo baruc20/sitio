@@ -55,10 +55,12 @@
    top: -5px;
   }
   #section1 {color: #fff; background-color: #fff;}
+   #section9 {padding-top:1px;color: #fff; background-color: #673ab7;}
   #section123 {padding-top:50px;color: #fff; background-color: #fff;}
-  #section2 {padding-top:50px;color: #fff; background-color: #673ab7;}
+    #section99 {padding-top:1px;color: #fff; background-color: #00bcd4;}
+  #section2 {padding-top:20px;color: #fff; background-color: #673ab7;}
   #section3 {color: #fff; background-color: #ff9800;}
-  #section41 {padding-top:50px;color: #fff; background-color: #00bcd4;}
+  #section41 {padding-top:2px;color: #fff; background-color: #00bcd4;}
   #section42 {padding-top:50px;color: #fff; background-color: #009688;}
   #section43 {padding-top:50px;color: #fff; background-color: #4d4d4d;}
  /* #section44 {padding-top:50px;height:500px;color: #fff; background-color: #009688;} */
@@ -169,19 +171,22 @@
 <nav class="navbar-default" data-spy="affix" data-offset-top="197">
   <div class="container-fluid">
     <div class="navbar-header">
+	
+	
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">WebSiteName</a>
+     <!-- <a class="navbar-brand" href="#">WebSiteName</a>-->
+	 <a href="#" class="navbar-left"><center><img src="img/Logo RFP-01.png" width="140px" height="50px" > </center>  </a>
     </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="#section1">Section 1</a></li>
-          <li><a href="#section2">Section 2</a></li>
-          <li><a href="#section3">Section 3</a></li>
+          <li><a href="index.html"><strong>HOME</strong></a></li>
+          <li><a href="#section2"><strong>DATOS NUMERICOS</strong></a></li>
+          <li><a href="#section3"><strong>UNIDADES DE NEGOCIO</strong></a></li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#section41">Section 4-1</a></li>
@@ -196,18 +201,44 @@
 
 
 
+
+
+
+
+
 <!-- menu fin -->
 
-<div id="mycarousel" class="carousel slide" data-ride="carousel">
-  
+<div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="49000" >
+    
    
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-        <video id="mivideo" data-color="lightblue" autoplay="autoplay" loop muted>
-        <source src="video/Rfplogistica.mp4" type="video/mp4"></source>
+    <div class="item active" >
+        <video id="mivideo" data-color="lightblue" autoplay="autoplay" loop muted >
+        <source src="video/pmchscorto.mp4" type="video/mp4"  ></source>
+		<source src="video/pmchscorto.ogg" type="video/ogg"  ></source>
       </video>
+	  
+	  <script>
+var vid = document.getElementById("mivideo");
+
+function getVolume() { 
+  alert(vid.volume);
+} 
+  
+function setHalfVolume() { 
+  vid.volume = 0.2;
+} 
+  
+function setFullVolume() { 
+  vid.volume = 1.0;
+} 
+</script> 
+	  
+	  
+	  
+	  
         <div class="carousel-caption">
-            <h3>First Image</h3>
+            <h3></h3>
 			
         </div>
     </div>
@@ -238,7 +269,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
- 
+
+
 
 
   
@@ -249,14 +281,17 @@
  
  
  
+ <div id="section9" class="container-fluid">
 
+ <center> <h1>MISIÓN, VISIÓN y VALORES</h1> </center>
+</div>
 
 <!-- menu -->
 
 <div id="section1" class="container-fluid">
   
   <article >
-   
+  
 	  <div class="col-md-2" style="padding: 1px;" id="dos" >
 		<img src="img/vacio.png" class="img-responsive" width="100%" height="100%" style=" background-color: #1a1aff; ">
 		<div class="text">MISIÓN</div>
@@ -307,7 +342,7 @@
             </div> <!-- div container-->
             </div><!-- col6-->
 
-  
+
   </article>
 
   <article >
@@ -361,10 +396,10 @@
   </article>
 </div> 
   
-  
+  <div id="section2" class="container-fluid">
 
- <center> <h1>NUESTROS DATOS NUMEROS</h1> </center>
-
+ <center> <h1>NUESTROS DATOS NUMEROS</h1> </center></br>
+</div>
 <div id="mycarousel2" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox" style="display: block; margin-left: auto">
       <div class="item active" >
@@ -490,21 +525,21 @@
       <div class="item active" >
         <img id="imagen" src="clientes/Clientes1final.svg" alt="Second Image">
         <div class="carousel-caption">
-
+			<h3 style="color:#1a1aff;" >Servicio de Inventario</h3>
  
         </div>
       </div>
       <div class="item" >
         <img id="imagen" src="clientes/clientes2.svg" alt="Third Image">
         <div class="carousel-caption">
-
+			<h3 style="color:#1a1aff;" >Back Office</h3>
 
         </div>
       </div>
       <div class="item">
         <img id="imagen" src="clientes/cliente3.svg" alt="Third Image">
         <div class="carousel-caption">
-
+			<h3 style="color:#1a1aff;" >Inspeción Auditorias</h3>
 
         </div>
       </div>
@@ -522,11 +557,13 @@
   </a>
 </div>   
 
+<div id="section99" class="container-fluid">
+<center> <h2>CONTACTO</h2> </center></div>
 
 
 <div id="section41" class="container-fluid">
 <!-- contacto-->
-<div class="col-xs-12"   > <center> <h3>CONTACTO</h3> </center> </div>
+
 
 	<!--	<p align="left" style="font-family: arial, sans-serif;
 font-size: 12px;
@@ -573,11 +610,6 @@ font-size: 12px;
 		
 		
 			<div class="col-xs-6"   >
-		
-		  
-		 
-
-	
 
 	
 	<iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.30395800415!2d-70.69551168534827!3d-33.337007980806526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c7427ec128f9%3A0x9649a20ec863db6b!2sRFP+Logistica+S.A.!5e0!3m2!1ses!2scl!4v1549027315098" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
@@ -588,23 +620,8 @@ font-size: 12px;
 
 <!--Google Maps-->
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 		</div>
-	
-	
-
-
-
-
 
 
 		<!--	mi texto <i class="fa fa-building-o" aria-hidden="true"> ee</i>
@@ -655,5 +672,6 @@ font-size: 12px;
 <center> <p class="text-muted credit" style="color:#fff;"> © 2019 RFP Logistica S.A. Todo los derechos reservados.</p></center></div>
 </div>
 </div>
+
 </body>
 </html>
